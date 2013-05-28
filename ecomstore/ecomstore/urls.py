@@ -8,32 +8,22 @@ from ch2.views import catalog
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'ecomstore.views.home', name='home'),
-    # url(r'^ecomstore/', include('ecomstore.foo.urls')),
+# urlpatterns = patterns('',
+#     # Examples:
+#     # url(r'^$', 'ecomstore.views.home', name='home'),
+#     # url(r'^ecomstore/', include('ecomstore.foo.urls')),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+#     # Uncomment the admin/doc line below to enable admin documentation:
+#     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+#     # Uncomment the next line to enable the admin:
+#     # url(r'^admin/', include(admin.site.urls)),
 
-    (r'^catalog/$', 'ch2.views.catalog'), 
-)
+#     (r'^catalog/$', 'ch2.views.catalog'), 
+# )
 
-
-
-# urlpatterns = patterns('', 
-
-
-
-#     # other commented code here. 
-
-
-
-#     (r'^catalog/$', 'ecomstore.views.catalog'), 
-
-
-
-# ) 
+# urlpatterns += patterns('', 
+urlpatterns = patterns('', 
+    #other commented code here 
+    (r'^catalog/$', 'ch2.views.home'), 
+) 
